@@ -68,4 +68,12 @@ public class ParsedPetternTest extends TestCase {
 		assertThat(pattern.hasStars()).isTrue();
 		assertThat(pattern.getParts()).isEmpty();
 	}
+
+	public void testAcceptJustStar() {
+		ParsedPettern pattern = ParsedPettern.parse("*");
+		assertThat(pattern.getStart()).isEqualTo("");
+		assertThat(pattern.getEnd()).isEqualTo("");
+		assertThat(pattern.hasStars()).isTrue();
+		assertThat(pattern.getParts()).isEmpty();
+	}
 }

@@ -28,7 +28,7 @@ public class PatternMatcher {
 			if (index == TemplateUtils.NOT_FOUND) {
 				return false;
 			}
-			from += part.length();
+			from = index + part.length();
 		}
 
 		return true;
